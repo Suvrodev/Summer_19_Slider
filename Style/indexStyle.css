@@ -1,0 +1,193 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    /* background-color: skyblue; */
+    width: 100%;
+    margin: 0 auto;
+}
+
+.imgsm{
+    width: 150px;
+    height: 150px;
+}
+.Title{
+    background-color:green;
+    color: white;
+    text-align: center;
+    padding: 5px 5px;
+    margin: 10px;
+    border-radius: 7px;
+    box-shadow: 15px 15px 25px black;
+}
+
+/* ImageCardContainer start */
+.ImageCardContainer{
+    /* width: 995px; */
+    background-color: yellow;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+.selectedimage{
+    max-width: 995px;
+    background-color: pink;
+    margin: 10px auto;
+}
+
+.ImageTitle{
+    background-color: teal;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    margin: 25px;
+    border-radius: 5px;
+}
+
+.imageclass{
+    width: 250px;
+    height: 240px;
+    border-radius: 50%;
+    /* border-top: 15px solid yellow;
+    border-right: 15px solid red;
+    border-bottom: 15px solid tomato; */
+    border: 15px solid green;
+    animation: anim 2s ease-in-out 0s infinite forwards;
+}
+
+@keyframes anim {
+    0%{
+        border-color: green;
+    }
+    20%{
+        border-color: crimson;
+    }
+    40%{
+        border-color: cornflowerblue;
+    }
+    60%{
+        border-color: purple;
+    }
+    80%{
+        border-color: blue;
+    }
+    100%{
+        border-color: green;
+    }
+    
+}
+
+.ImageCard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+.ButtonClass{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mybutton{
+    background-color:lightseagreen;
+    border: 0;
+    outline: 0;
+    color: white;
+    padding: 5px 7px;
+    margin: 10px;
+    border-radius: 5px;
+}
+/* ImageCardContainer End */
+
+/* carousel Start */
+.my_carousel{
+    width: 640px;
+    height: 600px;
+    background-color: cornflowerblue;
+    margin: 35px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 7px;
+    padding: 5px;
+    text-align: center;
+}
+.My_Slider{
+    width: 640px;
+    height: 500px;
+    background-color: orange;
+    margin: 35px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 7px;
+    padding: 5px;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.image_{
+    /* width: 370px;
+    height: 340px; */
+    width: 95%;
+    height: 90%;
+    margin: 20px auto;
+    border-radius: 7px;
+}
+.show_Number{
+    background-color: teal;
+    margin: 1px;
+    padding: 5px;
+    color: white;
+    border-radius: 7px;
+    text-align: center;
+    width: 450px;
+    margin: 10px auto;
+}
+/* carousel End */
+
+/* Slider Start */
+.PNButton{
+    width: 90%;
+    margin: 0 auto;
+    /* background-color: pink; */
+    display: flex;
+    justify-content: space-between;
+}
+.Tomato{
+    background-color: tomato;
+}
+.pd{
+    padding: 10px 10px;
+}
+/* Slider End */
+
+
+
+/* Media Query Start */
+@media only screen and (max-width: 576px) {
+    .imageclass{
+        width: 80px;
+        height: 80px;
+    }
+    .selectedimage{
+        width: 100%;
+    }
+    .imgsm{
+        width: 120px;
+    }
+    .my_carousel{
+        width: 90%;
+        
+    }
+    .My_Slider{
+        width: 90%;
+    }
+    
+}
+/* Media Query End */
