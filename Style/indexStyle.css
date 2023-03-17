@@ -4,7 +4,7 @@
 }
 
 body{
-    /* background-color: skyblue; */
+    background-color: skyblue;
     width: 100%;
     margin: 0 auto;
 }
@@ -26,7 +26,7 @@ body{
 /* ImageCardContainer start */
 .ImageCardContainer{
     /* width: 995px; */
-    background-color: yellow;
+    /* background-color: yellow; */
     margin: 0 auto;
     overflow: hidden;
     text-align: center;
@@ -58,27 +58,7 @@ body{
     animation: anim 2s ease-in-out 0s infinite forwards;
 }
 
-@keyframes anim {
-    0%{
-        border-color: green;
-    }
-    20%{
-        border-color: crimson;
-    }
-    40%{
-        border-color: cornflowerblue;
-    }
-    60%{
-        border-color: purple;
-    }
-    80%{
-        border-color: blue;
-    }
-    100%{
-        border-color: green;
-    }
-    
-}
+
 
 .ImageCard{
     display: flex;
@@ -191,3 +171,27 @@ body{
     
 }
 /* Media Query End */
+
+/* Animation Start */
+@keyframes anim {
+    0%{
+        border-color: green;
+    }
+    20%{
+        border-color: crimson;
+    }
+    40%{
+        border-color: cornflowerblue;
+    }
+    60%{
+        border-color: purple;
+    }
+    80%{
+        border-color: blue;
+    }
+    100%{
+        border-color: green;
+    }
+    
+}
+/* Animation End */
