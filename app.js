@@ -44,11 +44,16 @@ const DisplayImage=data=>{
 }
 
 const Retrieve_Students=()=>{
-    console.log('This is Retrieve Function')
+   // console.log('This is Retrieve Function')
     const PreviousBookmarked=JSON.parse(localStorage.getItem('Summer19'));
     SelectedImage.innerHTML =''
     PreviousBookmarked.forEach(student=>{
-        console.log(student.image)
+        console.log('Image of Student: ')
+        const x_pic=student.Image;
+        const x_Picture=x_pic+''
+        console.log(x_Picture)
+        ImageArray.push(x_Picture)
+
         SelectedImage.innerHTML +=`
         <img class="imgsm" src="${student.Image}" >
       `
@@ -82,108 +87,8 @@ const ImageClick=(id,Image)=>{
 
 
 LoadImage();
-
-
-
-
-
-
-
-const GetImagePath=(Data)=>{
-    const Path=Data.src;
-    console.log('Image Path: '+Path)
-    ImageArray.push(Path)
-
-    // let NewImagePath=Path;
-    // NewImagePath=NewImagePath.slice(22);
-    // console.log('New path: '+NewImagePath)
-    // console.log('Datatype: '+typeof NewImagePath)
-    const img=document.createElement('img');
-   // img.src=Path;
-    SelectedImage.innerHTML +=`
-      <img class="imgsm" src="${Path}" >
-    `
-}
-const Touch_=(Data)=>{
-    Data.style.transform = 'rotate(180deg)';
-}
-Image1.addEventListener('click',()=>{
-    GetImagePath(Image1)
-    Touch_(Image1);
-})
-Image2.addEventListener('click',()=>{
-    GetImagePath(Image2)
-    Touch_(Image2);
-})
-Image3.addEventListener('click',()=>{
-    GetImagePath(Image3)
-    Touch_(Image3);
-})
-Image4.addEventListener('click',()=>{
-    GetImagePath(Image4)
-    Touch_(Image4);
-})
-Image5.addEventListener('click',()=>{
-    GetImagePath(Image5)
-    Touch_(Image5);
-})
-Image6.addEventListener('click',()=>{
-    GetImagePath(Image6)
-    Touch_(Image6);
-})
-Image7.addEventListener('click',()=>{
-    GetImagePath(Image7)
-    Touch_(Image7);
-})
-Image8.addEventListener('click',()=>{
-    GetImagePath(Image8)
-    Touch_(Image8);
-})
-Image9.addEventListener('click',()=>{
-    GetImagePath(Image9)
-    Touch_(Image9);
-})
-Image10.addEventListener('click',()=>{
-    GetImagePath(Image10)
-    Touch_(Image10);
-})
-Image11.addEventListener('click',()=>{
-    GetImagePath(Image11)
-    Touch_(Image11);
-})
-Image12.addEventListener('click',()=>{
-    GetImagePath(Image12)
-    Touch_(Image12);
-})
-Image13.addEventListener('click',()=>{
-    GetImagePath(Image13)
-    Touch_(Image13);
-})
-Image14.addEventListener('click',()=>{
-    GetImagePath(Image14)
-    Touch_(Image14);
-})
-Image15.addEventListener('click',()=>{
-    GetImagePath(Image15)
-    Touch_(Image15);
-})
-Image16.addEventListener('click',()=>{
-    GetImagePath(Image16)
-    Touch_(Image16);
-})
-Image17.addEventListener('click',()=>{
-    GetImagePath(Image17)
-    Touch_(Image17);
-})
-Image18.addEventListener('click',()=>{
-    GetImagePath(Image18)
-    Touch_(Image18);
-})
-Image19.addEventListener('click',()=>{
-    GetImagePath(Image19)
-    Touch_(Image19);
-})
-
+Retrieve_Students();
+console.log(ImageArray)
 
 // For Select Image End
 
