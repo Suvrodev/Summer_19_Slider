@@ -26,6 +26,27 @@ const DisplayImage=data=>{
 const ImageClick=(id,Image)=>{
     console.log("ID: "+id)
     console.log('Image: '+Image)
+    const Student={id,Image}
+    const Students=[];
+
+    const PreviousBookmarked=JSON.parse(localStorage.getItem('Summer19'));
+    if(PreviousBookmarked){
+
+        const isThisStudent=PreviousBookmarked.find(std=>std.id===id)
+        if(isThisStudent){
+            alert('This Student Already exists')
+        }else{
+            Students.push(...PreviousBookmarked,Student)
+            localStorage.setItem('Summer19',JSON.stringify(Students))
+        }
+      
+    }else{
+        Students.push(Student)
+        localStorage.setItem('Summer19',JSON.stringify(Students))
+    }
+
+   
+
 }
 
 
