@@ -2,7 +2,7 @@ const displayImageCard=document.getElementById('image_card');
 
 const LoadImage=()=>{
      //const a='../product.json';
-     fetch("../product.json")
+     fetch("./product.json")
     .then(res=>res.json())
     .then(data=>DisplayImage(data))
 }
@@ -23,7 +23,12 @@ const DisplayImage=data=>{
     })
 }
 
+const Retrieve_Students=()=>{
+    const PreviousBookmarked=JSON.parse(localStorage.getItem('Summer19'));
+}
+
 const ImageClick=(id,Image)=>{
+    ///Set to Local storage
     console.log("ID: "+id)
     console.log('Image: '+Image)
     const Student={id,Image}
@@ -44,8 +49,6 @@ const ImageClick=(id,Image)=>{
         Students.push(Student)
         localStorage.setItem('Summer19',JSON.stringify(Students))
     }
-
-   
 
 }
 
