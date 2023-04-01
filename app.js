@@ -1,4 +1,24 @@
+let ImageArray=[];
+
 const displayImageCard=document.getElementById('image_card');
+const SelectedImage=document.getElementById('selectedimg');
+
+document.getElementById('crsl').style.display='none'
+document.getElementById('sldr').style.display='none'
+
+const Image_Number=document.getElementById('imagenumber');
+const Index_Number=document.getElementById('indexnumber');
+
+const Image_Number2=document.getElementById('imagenumber_');
+const Index_Number2=document.getElementById('indexnumber_');
+
+
+
+Image_Number.style.display='none';
+Index_Number.style.display='none';
+
+Image_Number2.style.display='none';
+Index_Number2.style.display='none';
 
 const LoadImage=()=>{
      //const a='../product.json';
@@ -24,7 +44,15 @@ const DisplayImage=data=>{
 }
 
 const Retrieve_Students=()=>{
+    console.log('This is Retrieve Function')
     const PreviousBookmarked=JSON.parse(localStorage.getItem('Summer19'));
+    SelectedImage.innerHTML =''
+    PreviousBookmarked.forEach(student=>{
+        console.log(student.image)
+        SelectedImage.innerHTML +=`
+        <img class="imgsm" src="${student.Image}" >
+      `
+    })
 }
 
 const ImageClick=(id,Image)=>{
@@ -49,57 +77,17 @@ const ImageClick=(id,Image)=>{
         Students.push(Student)
         localStorage.setItem('Summer19',JSON.stringify(Students))
     }
-
+    Retrieve_Students()
 }
 
 
 LoadImage();
 
 
-document.getElementById('crsl').style.display='none'
-document.getElementById('sldr').style.display='none'
-
-const Image_Number=document.getElementById('imagenumber');
-const Index_Number=document.getElementById('indexnumber');
-
-const Image_Number2=document.getElementById('imagenumber_');
-const Index_Number2=document.getElementById('indexnumber_');
 
 
 
-Image_Number.style.display='none';
-Index_Number.style.display='none';
 
-Image_Number2.style.display='none';
-Index_Number2.style.display='none';
-
-// For Select Image start
-const Image1=document.getElementById('im_1');
-const Image2=document.getElementById('im_2');
-const Image3=document.getElementById('im_3');
-const Image4=document.getElementById('im_4');
-const Image5=document.getElementById('im_5');
-const Image6=document.getElementById('im_6');
-const Image7=document.getElementById('im_7');
-const Image8=document.getElementById('im_8');
-const Image9=document.getElementById('im_9');
-const Image10=document.getElementById('im_10');
-const Image11=document.getElementById('im_11');
-const Image12=document.getElementById('im_12');
-const Image13=document.getElementById('im_13');
-const Image14=document.getElementById('im_14');
-const Image15=document.getElementById('im_15');
-const Image16=document.getElementById('im_16');
-const Image17=document.getElementById('im_17');
-const Image18=document.getElementById('im_18');
-const Image19=document.getElementById('im_19');
-
-let ImageArray=[];
-
-
-///Show Selected Image Start
-const SelectedImage=document.getElementById('selectedimg');
-///Show Selected Image end
 
 const GetImagePath=(Data)=>{
     const Path=Data.src;
