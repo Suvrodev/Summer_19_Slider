@@ -1,3 +1,37 @@
+const displayImageCard=document.getElementById('image_card');
+
+const LoadImage=()=>{
+     //const a='../product.json';
+     fetch("../product.json")
+    .then(res=>res.json())
+    .then(data=>DisplayImage(data))
+}
+
+const DisplayImage=data=>{
+   // console.log(data)
+    data.forEach(data=>{
+       // const sImage=document.createElement('img')
+        // sImage.classList.add('imageclass')
+        // console.log(data.image)
+        // sImage.src=data.image
+        // sImage.onclick
+        // displayImageCard.appendChild(sImage)
+        displayImageCard.innerHTML+=
+        `
+          <img onclick="ImageClick('${data.id}','${data.image}')" class="imageclass" src="${data.image}" alt="">
+        `
+    })
+}
+
+const ImageClick=(id,Image)=>{
+    console.log("ID: "+id)
+    console.log('Image: '+Image)
+}
+
+
+LoadImage();
+
+
 document.getElementById('crsl').style.display='none'
 document.getElementById('sldr').style.display='none'
 
